@@ -1,0 +1,84 @@
+html {
+	font-size: 10px;
+}
+
+.container {
+	margin: 10px; 
+}
+
+.car {
+	flex: 1 1 calc(50% - 10px); 
+}
+
+.car img {
+	height: 150px; 
+}
+
+.cars h2 {
+	font-size: 1.4em; 
+}
+
+.car h3 {
+	font-size: 1em; 
+}
+
+.car p {
+	font-size: 0.8em;
+}
+
+.navbar ul {
+	flex-direction: column; 
+	align-items: center;
+}
+
+.navbar li {
+	margin: 5px 0; 
+}
+
+.ad h2 {
+	font-size: 1.8em;
+}
+
+.ad p {
+	font-size: 1em; 
+}
+
+.offer {
+	width: 100%;
+}
+
+#despre h2 {
+	font-size: 1.6em; 
+}
+
+#despre p {
+	font-size: 1em;
+}
+
+#contact h2 {
+	font-size: 1.8em; 
+}
+
+#contact form {
+	max-width: 100%;
+}
+
+.rental-days {
+	width: 50px; 
+}
+
+.price {
+	font-size: 1em;
+}
+
+#recenzii h2 {
+	font-size: 1.5rem; 
+}
+
+.recenzie-text {
+	font-size: 0.9rem; 
+}
+
+.footer {
+	font-size: 0.8rem;
+}

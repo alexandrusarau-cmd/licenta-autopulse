@@ -1,0 +1,12 @@
+body { font-family: Arial; background:#f4f4f4; margin:0; padding:0; }
+header { background:#333; color:white; padding:10px; text-align:center;}
+header nav a { color:white; margin:0 10px; text-decoration:none;}
+h1 { color:#E74C3C; text-align:center;}
+h2 { color:red;}
+main { padding:20px;}
+table { width:100%; border-collapse:collapse; margin-top:20px; }
+table th, table td { border:1px solid #ccc; padding:10px; text-align:left;}
+.login-container { width:300px; margin:100px auto; background:white; padding:20px; border-radius:10px; box-shadow:0 0 10px rgba(0,0,0,0.2);}
+button { background:#E74C3C; color:white; border:none; padding:10px 20px; cursor:pointer; border-radius:5px;}
+button:hover { background:#C0392B;}
+.error { color:red; text-align:center;}

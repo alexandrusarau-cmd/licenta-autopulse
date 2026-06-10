@@ -1,0 +1,149 @@
+body {   
+    background-color: rgb(197, 4, 4);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    background-color: #fff;
+    color: rgb(224, 10, 10);
+    padding: 30px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.footer {
+    background-color: #fff;
+    color: rgb(224, 10, 10);
+    padding: 20px;
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    flex: 1; 
+    text-align: left; 
+}
+
+.logo img {
+    max-width: 150px; 
+}
+
+.navbar {
+    display: flex;
+}
+
+.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    display: inline-block; 
+    margin-right: 20px;
+}
+
+.menu li:last-child {
+    margin-right: 0;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: rgb(224, 10, 10);
+    transition: color 0.3s;
+}
+
+.menu li a:hover {
+    color: rgb(97, 3, 3);
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 160px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color:rgb(224, 10, 10)red;
+    transition: color 0.3s;
+}
+
+.dropdown-content a:hover {
+    color: rgb(97, 3, 3);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.footer {
+    background-color: #fff;
+    color: rgb(224, 10, 10);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.footer .leftfooter {
+    flex: 1;
+    text-align: left;
+}
+
+.footer .center {
+    flex: 1;
+    text-align: center;
+}
+
+.footer .rightfooter {
+    flex: 1;
+    text-align: right;
+}
+
+.footer img {
+    max-width: 100px;
+}
+
+.container {
+    background-color: #fff;
+    border-radius: 18px;
+    padding: 20px;
+    width: 300px;
+    margin: 50px auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+h2 {
+    color: red;
+    text-align: center;
+}
+.contact-info {
+    margin-top: 20px;
+}
+.contact-info p {
+    margin: 10px 0;
+}
+.phone {
+    color: red;
+    text-decoration: underline;
+    cursor: pointer;
+}
