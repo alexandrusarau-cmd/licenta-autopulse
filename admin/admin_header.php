@@ -36,6 +36,7 @@
         <a href="admin_users.php">Lista utilizatori</a> |
         <a href="admin_rentals.php">Rezervari</a> |
         <a href="admin_sales.php">Vânzări</a> |
+		<a href="admin_messages.php">Mesaje Contact</a> |
         <a href="admin_logout.php" style="color: #ef4444 !important;">Logout</a>
     </nav>
 </header>
