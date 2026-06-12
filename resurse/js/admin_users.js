@@ -115,12 +115,11 @@ document.addEventListener('DOMContentLoaded', function(){
 				action: 'add',
 				username: document.getElementById('username').value.trim(),
 				email: document.getElementById('email').value.trim(),
-				password: document.getElementById('password').value.trim(),
 				role: document.getElementById('role').value
 			};
 
-			if(!data.username || !data.email || !data.password){
-				alert("Completeaza toate campurile obligatorii!");
+			if(!data.username || !data.email){
+				alert("Completeaza username-ul si emailul!");
 				return;
 			}
 
