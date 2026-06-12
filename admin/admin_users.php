@@ -6,7 +6,7 @@ include '../db_connect.php';
 
 if(isset($_POST['action'])){
 
-    $allowedFields = ['username','email','password','role'];
+	$allowedFields = ['username','email','role'];
     if($_POST['action'] === 'update'){
         if(!in_array($_POST['field'],$allowedFields)){
             echo "camp invalid";
@@ -23,13 +23,15 @@ if(isset($_POST['action'])){
         echo $stmt->execute() ? "ok" : "eroare";
         exit;
     }
-    if($_POST['action'] === 'add'){
-        $password = 'test123';
-        $stmt = $conn->prepare("INSERT INTO users (username,email,password,role) VALUES (?,?,?,?)");
-        $stmt->bind_param("ssss", $_POST['username'], $_POST['email'], $password, $_POST['role']);
-        echo $stmt->execute() ? "ok" : "eroare";
-        exit;
-    }
+	if($_POST['action'] === 'add'){
+		$password = password_hash('test123', PASSWORD_DEFAULT);
+
+		$stmt = $conn->prepare("INSERT INTO users (username,email,password,role) VALUES (?,?,?,?)");
+		$stmt->bind_param("ssss", $_POST['username'], $_POST['email'], $password, $_POST['role']);
+
+		echo $stmt->execute() ? "ok" : "eroare";
+		exit;
+	}
 }
 
 $filterSQL = "";
@@ -43,7 +45,7 @@ if(isset($_GET['search']) && $_GET['search'] !== ""){
     $types = "ss";
 }
 
-$stmt = $conn->prepare("SELECT * FROM users $filterSQL ORDER BY id ASC");
+$stmt = $conn->prepare("SELECT id, username, email, role FROM users $filterSQL ORDER BY id ASC");
 if($filterSQL) $stmt->bind_param($types, ...$params);
 $stmt->execute();
 $result = $stmt->get_result();
@@ -75,7 +77,7 @@ include 'admin_header.php';
 
     <input id="username" placeholder="Username"><br>
     <input id="email" placeholder="Email"><br>
-    <input id="password" placeholder="Parola" value="test123"><br>
+	<p>Parola implicita pentru conturile noi este: <strong>test123</strong></p>
     <select id="role">
         <option value="client">Client</option>
         <option value="administrator">Administrator</option>
@@ -90,7 +92,6 @@ include 'admin_header.php';
     <th>ID</th>
     <th>Username</th>
     <th>Email</th>
-    <th>Password</th>
     <th>Rol</th>
     <th>Actiuni</th>
 </tr>
@@ -99,7 +100,7 @@ include 'admin_header.php';
 <tr data-id="<?php echo $row['id']; ?>">
     <td><?php echo $row['id']; ?></td>
 
-    <?php foreach(['username','email','password','role'] as $field){ ?>
+    <?php foreach(['username','email','role'] as $field){ ?>
     <td>
         <span class="editable" data-field="<?php echo $field; ?>" data-id="<?php echo $row['id']; ?>">
             <?php echo $row[$field]; ?>
